@@ -1,19 +1,75 @@
+@baseUrl = http://localhost:3000
+
+
+POST http://localhost:3000/api/inventario
+Content-Type: application/json
+
+{
+    "nome": "Motor Falcon 500",
+    "fabricante": "VEX",
+    "quantidade_atual": 3,
+    "quantidade_min": 2,
+    "localizacao": "Bancada B"
+}
+
 ###
 
 GET http://localhost:3000/api/inventario
 
 ###
 
-GET http://localhost:3000/api/inventario/:9
+GET http://localhost:3000/api/inventario/7
 
 ###
 
-POST http://localhost:3000/api/inventario
+PUT http://localhost:3000/api/inventario/7
+Content-Type: application/json
+
+{
+    "nome": "Motor Falcon 500 V2",
+    "fabricante": "VEX Robotics",
+    "quantidade_atual": 12,
+    "quantidade_min": 2,
+    "localizacao": "Bancada B"
+}
 
 ###
 
-PUT http://localhost:3000/api/inventario
+DELETE http://localhost:3000/api/inventario/7
 
 ###
 
-DELETE  http://localhost:3000/api/inventario
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "admin@inventpro.com",
+    "senha": "senhaCriptografada"
+}
+
+###
+
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+    "nome": "Fylipe Denazio",
+    "email": "fylipe@inventpro.com",
+    "senha": "password123",
+    "perfil": "administrador"
+}
+
+###
+
+GET http://localhost:3000/produtos
+
+###
+
+POST http://localhost:3000/movimentacoes
+Content-Type: application/json
+
+{
+    "tipo": "Entrada",
+    "quantidade": 15,
+    "id_produto": 5
+}
