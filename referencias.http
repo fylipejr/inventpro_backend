@@ -1,0 +1,19 @@
+###
+
+GET http://localhost:3000/api/inventario
+
+###
+
+GET http://localhost:3000/api/inventario/:9
+
+###
+
+POST http://localhost:3000/api/inventario
+
+###
+
+PUT http://localhost:3000/api/inventario
+
+###
+
+DELETE  http://localhost:3000/api/inventario
